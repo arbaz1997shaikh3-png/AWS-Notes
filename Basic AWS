@@ -1,0 +1,66 @@
+Q. What is cloud computing?
+Ans : 
+Cloud computing is the delivery of computing services such as servers, storage, databases, and networking over the internet on demand, usually with pay-as-you-go pricing.
+
+Q. What is AWS cloud?
+Ans : 
+1. AWS stands for amazon web service.
+2. AWS Cloud is Amazon’s cloud computing platform.
+3. AWS is a cloud computing platform provided by Amazon that offers on-demand services such as computing, storage, networking, and databases over the internet.
+
+Q. What is the advantages of cloud computing?
+Ans :
+1. No need to purchase physical servers.
+2. Resources can be created in minutes.
+3. Resources can be scaled according to demand.
+4. Services are available in multiple geographic regions.
+5. You can pay according to usage, depending on the service and pricing model.
+
+Q. How many types of cloud?
+Ans :
+There are 3 types of cloud.
+1. Public Cloud.
+2. Private cloud.
+3. Hybrid cloud.
+
+1. Public cloud - A public cloud is a cloud environment where a cloud provider offers computing services to multiple customers over the internet.
+                  Example: Amazon Web Services (AWS), Microsoft Azure, and Google Cloud.
+
+2. Provate cloud - A private cloud is a cloud environment dedicated to a single organization. 
+                   It can run in the organization's own data center or be hosted by a third-party provider. 
+
+3. Hybrid cloud - A hybrid cloud combines a private cloud environment with a public cloud environment, allowing workloads and data to be distributed between them.
+                  A company keeps sensitive business records in its private data center and hosts its customer-facing website on AWS.
+
+
+Q. Difference between Iaas, PaaS and SaaS?
+Ans :
+
+Component      	 |         IaaS	   |   PaaS	      |    SaaS
+--------------------------------------------------------------------------
+Application	     |        You	     |   You	      |    Provider
+Data	           |        You	     |   You	      |    Shared responsibility
+Runtime	         |        You	     |   Provider	  |    Provider
+Operating system |	      You	     |   Provider	  |    Provider
+Virtualization	 |        Provider |	 Provider	  |    Provider
+Physical servers |	      Provider |	 Provider	  |    Provider
+
+Q. How AWS charge?
+Ans : 
+1. Compute
+2. Storage
+3. Data Transfer
+
+Q. What is region?
+1. A Region is a collection of AWS data centers in a specific geographic area.
+2. Each Region consists 2 or more Availability Zones (AZs).
+
+Q. What is availability zone?
+1. An Availability Zone is a physically isolated data center within an AWS Region.
+2. Each AWS Region contains 2 or more Availability Zones.
+3. AZs independent power, cooling, and networking.
+4. As of now, the maximum number of Availability Zones (AZs) in a single AWS Region is 6.
+
+Q.. What is local zone?
+1. A Local Zone is like a mini data center located closer to your Region or Az's.
+2. Delivers ultra-low latency (sub-10 milliseconds)
