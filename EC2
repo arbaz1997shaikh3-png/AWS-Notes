@@ -141,11 +141,8 @@ It is a cheap EC2 instance provided by AWS using its unused server capacity. AWS
 
 Q. What is dedicated host?
 Ans :
-1. A physical server reserved for you.
-2. You can see and control the host.
-3. Place EC2 instances yourself.
-4. BYOL licenses (Oracle, SQL Server, SAP)
-5. Compliance & auditing	
+A Dedicated Host is a physical server dedicated to a single customer in AWS.
+
 =======================================================================================================================================================
 **AMI (Amazon Machine Image)**
 
