@@ -1,6 +1,194 @@
+Q. What if 2/2 status check fail?
+Ans : 
+
+
+
 Q. What is EC2 in AWS?
 Ans :
 EC2 (Elastic Compute Cloud) is a web service from AWS that lets you run virtual servers in the cloud.
 
 Q. What  is security group?
 Ans : 
+1. In AWS, a Security Group acts as a virtual firewall for your EC2 instances.
+2. It controls inbound and outbound traffic rules based on.
+3. We can add same security groups to other EC2 instances.
+4. In order to create security group we need to go EC2 and click on security group on EC2 dashboard. 
+5. We can add and remove the security group after creating the instance. (Action-Security-Change security group)
+
+Q. What is Stateful and Stateless?
+Ans : 
+stateful remembers the connection, while stateless does not remember the connection between individual requests in the same way.
+
+Q. Create windows instance and login into it?
+Ans :
+Q. How to create windows instace and connect?
+1. Go to EC2 and click on instance.
+2. Click on launched instances and from there we can launch windows instance.
+3. In order to connec the windows instace. Select the insatnce and click on connect.
+4. Go to RDP client and download remote desktop file.
+5. Click on that downloaded file and enter password. That's how you can connect.
+(In order to retrive the password then click on get password --> Upload pair key --> Dectypt password --> That's how you can get password.)
+
+Q. How to access the Linux instance?
+Ans :
+There are 3 ways to access the linux instance.
+1. Access linux instance through cmd.
+2. Open the cmd and go to perm key location.
+3. Run the below command.
+  Ssh -I permkey.perm Ubuntu@public DNS Name.
+4. Click on enter.
+
+1. Access linux instance through AWS portal.
+2. Select the instance and click on connect. 
+3. Go to EC2 Instance Connect and click on connect.
+
+
+1. Access linux instance through AWS portal.
+2. Open the linux machine (Ubutu, RedHat, kali and etc.)
+3. Go to perm file location and secure the perm file. (Other and Group should not be read permition.)
+4. Run the below command.
+  Ssh -I permkey.perm Ubuntu@public DNS Name.
+
+Q. How to install all the packages at a time in ubuntu?
+Ans : 
+  Apt-get update
+
+Q. What is curl command?
+Ans : 
+
+Q. Which key pair we can use while takeing putty access.
+Ans : 
+  .ppk
+
+Q. What is types?
+Ans :
+
+Q. What is domain controler?
+Ans :
+A Domain Controller (DC) is a server that manages users, computers, authentication, and security policies in an organization.
+
+Q. What is bootstrap script? 
+Ans :
+A bootstrap script is a script that automatically runs commands when a server or computer is initialized for the first time or during startup, depending on how it is configured.
+
+#!/bin/bash
+yum update -y
+yum install -y httpd
+systemctl start httpd
+systemctl enable httpd
+echo "<h1>Welcome to AWS Class</h1>" > /var/www/html/index.html
+
+Q. how to use bootstrap script on AWS instance?
+Ans :
+1. In order to display the  message we need to enable the http port as well.
+2. while creating AWS instance go to advance details option. 
+3. Simply click on launch instance.
+4. Go to any browser and past the public IP and press enter.
+5. Now you can see the website.
+
+Q. What is Termination protection?
+Ans : 
+Termination Protection in AWS EC2 is a safety feature designed to prevent accidental deletion (termination) of your instances.
+ EC2 --> Select instances --> Action --> Change termination protection --> Enable --> Save.
+
+Q. What is placement group?
+Ans : 
+Placement Group helps you decide how your EC2 instances are arranged to improve performance, availability, or fault isolation.
+AWS provides 3 main types of Placement Groups.
+1. Cluster Placement Group      -  Places instances close together in a single Availability Zone to support low-latency, high-throughput networking.
+2. Spread Placement Group       -  Places EC2 instances on different physical hardware so that if one hardware fails, all instances are less likely to fail together. 
+3. Partition Placement Group    -  Divides instances into logical partitions, with each partition using separate sets of racks.
+4. When you launch instances in advance option you can find the placement group option.
+
+Q. What are the limitation of placement group?
+Ans :
+1. Placement group name must be unique within your AWS account for the region.
+2. You cannot merge placement group.
+3. One instance launch in one placement group.
+4. You cannot launch dedicated hosts in placement group.
+
+Q. What is tenancy?
+Ans : 
+1. Tenancy decides whether your EC2 instance runs on shared hardware or dedicated hardware.
+2. There are 3 main tenancy options for EC2 instances.
+  a. Shared Tenancy (Default)    -    A normal EC2 instance using the default tenancy option.
+  b. Dedicated Instance          -    only your instances runs and AWS has it's control.
+  c. Dedicated Host              -    only your instances runs and ypu have it's control.
+
+3. When you launch instances in advance option you can find the tenancy option.
+
+Q. What is Hibernate behavior?
+Ans : 
+Hibernate behavior in AWS EC2 is similar to putting your laptop to sleep rather than shutting it down.
+Note : - In order to enabe the hibernate behavior for instance we need to encrypt the root volume.
+
+Q. What is On-Demand instance?
+Ans : 
+An On-Demand instance is a type of Amazon EC2 instance pricing model where:
+1. You pay by the hour or second (depending on the instance type).
+2. There is no long-term commitment.
+3. You can launch, stop, and terminate instances at any time.
+4. You're only charged for the time the instance is running.
+
+Q. What is Reserved Instance?
+Ans : 
+It is an AWS pricing option where you commit to using EC2 for 1 or 3 years to get a discount compared to On-Demand pricing.
+You get upto 75% siscount.
+
+Q. What is Spot Instance?
+Ans : 
+It is a cheap EC2 instance provided by AWS using its unused server capacity. AWS can take it back at any time.
+
+Q. What is dedicated host?
+Ans :
+1. A physical server reserved for you.
+2. You can see and control the host.
+3. Place EC2 instances yourself.
+4. BYOL licenses (Oracle, SQL Server, SAP)
+5. Compliance & auditing	
+=======================================================================================================================================================
+**AMI (Amazon Machine Image)**
+
+Q. Wha is AMI?
+Ans :
+An AMI (Amazon Machine Image) is a preconfigured template used to launch virtual machines (EC2 instances) in AWS.
+
+Q. Use case of AMI?
+Ans : 
+1. Rapid instance deployement of EC2 instance.
+2. Load balancing and scaling
+3. Clone
+4. Disaster recovery.
+
+Q. How to Create AMI from instce?
+Ans :
+There is multiple way to creata AMI from insatce.
+1. EC2 --> Instances --> Right click on insatce --> Image and template -- > Create image.
+2. EC2 --> Instances --> Select instace and click on action --> Image and template -- > Create image.
+3. Create image via snapshot.
+EC2 --> Elastic block storage --> Snapshot -->  Select snapshot and Go to action --> Create image from snapshot.
+(Note :- We need to take  root volume snapshot to create AMI)
+
+Q. How to Create instance from AMI?
+Ans :
+There is 2 ways.
+1. EC2 --> Images --> AMIs --> Select Image --> launch insatce from AMI.
+2. EC2 --> Instance --> launch instance --> Applicate and OS Imaages -->My AMIs --> Owned by me --> launch instance.
+
+Q. How to Share AMI with other account?
+Ans :
+EC2 --> Images --> AMIs --> Select Image --> Edit AMI permistion --> Enter account number --Save changed.
+
+Q. How to make Public instance to private instance with the help of AMI availability?
+Ans :
+You cannot directly change a running EC2 instance from public to private using AMI, but you can achieve this by creating an AMI and launching a new instance in a private subnet.
+
+(Note : - We can Copy AMI and recycle in as well)
+
+Q. How to delete AMI?
+Ans : 
+We need to Deregister AMI from snapshot then AMI will delete automatic.
+EC2 --> Images --> AMIs --> Select Image --> Action -- Deregister AMI  
+
+
+=======================================================================================================================================================
