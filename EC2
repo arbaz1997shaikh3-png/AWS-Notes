@@ -143,6 +143,18 @@ Q. What is dedicated host?
 Ans :
 A Dedicated Host is a physical server dedicated to a single customer in AWS.
 
+Q. On-demand vs reserve vs spot.
+Ans :
+Feature		     |       On-Demand		   |       Reserved			      |    Spot
+--------------------------------------------------------------------------------------
+Commitment		 |         None	         |        	1 or 3 years		|	  None
+Cost			     |         $$$			     |     $$ (up to 75% off)		|    $ (up to 90% off)
+Flexibility    |      		High			   |         Medium			      |    Low
+Use Case	     |     Short-term/dev	   |      Long-term/steady	  |     Batch jobs, fault-tolerant apps
+Interruption	 |	         No          |      			No				    |      Yes (anytime)
+
+
+
 =======================================================================================================================================================
 **AMI (Amazon Machine Image)**
 
