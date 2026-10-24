@@ -201,3 +201,103 @@ EC2 --> Images --> AMIs --> Select Image --> Action -- Deregister AMI
 
 
 =======================================================================================================================================================
+**Elastic IP**
+
+Q. What is elastic IP?
+Ans :
+1. To keep the same IP even if you stop/start or replace an instance.
+2. For services that require fixed IP allowlists (e.g., firewalls, APIs).
+3. By default, you can allocate up to 5 Elastic IP (EIP) addresses per Region per AWS account.
+4. This limit is per Region, not global.
+5. Find the below steps create elastic IP and assign to any instances.
+	a. Create elastic IP
+	EC2 --> Elastic IPs --> Allocate Elastic IP Address --> Network border group --> Allocate
+	b. Assign elasic IP to instace.
+	EC2 --> Elastic IPs --> Select Elastic IP --> Associate Elastic IP Address --> Selecct Instance or Private IP address --> Associate
+	c. Release or delete elastic IP
+	EC2 --> Elastic IPs --> Select Elastic IP --> Deassociate Elastic IP Address --> Relaease Elastic IP Address
+(Note :- If you can check the insatce IP it will be changed after release elastc IP)
+
+=======================================================================================================================================================
+**Elastic block storage (EBS)**
+
+Q. What is Elastic Block Storage (EBS)?
+Ans :
+Elastic Block Store (EBS) in AWS is a block-level storage service designed to be used with Amazon EC2  instances. It's like a virtual hard drive in the cloud that you can attach to your EC2 instance to store data.
+
+Types of EBS?
+1. General Purpose SSD (gp3)
+2. General Purpose SSD (gp2)
+3. Provisioned IOPS SSD (io1)
+4.  Provisioned IOPS SSD (io2)
+5. Cold HDD (sc1)
+6. Throughput Optimized HDD (st1)
+7. Magnetic (Standard)
+
+https://aws.amazon.com/ebs/volume-types/#topic-0
+
+Q. How to make instance store as a root device?
+Ans :
+Launch instance --> Browse AMI --> Community AMIs --> Root device type --> Instance store
+
+Q. How to make EBS  as a root device?
+Ans :
+Launch instance --> Browse AMI --> Community AMIs --> Root device type --> EBS
+
+Q. How to make instance store as a data volume?
+Ans : 
+Launch instance --> Compare instance types
+
+Q. How to make instance store as a data volume?
+Ans : 
+Launch instance --> Configure storage 
+
+Q. How to create EBS volume and attach to the EC2 instace?
+Ans :
+Create EBS volume : -
+EC2 --> Elastic Block Store --> Volumes --> Create volume --> Enter all the values and click on create volume.
+
+Attache EBS volume to instance : -
+EC2 --> Elastic Block Store --> Volumes --> Select volume --> Action --> Attach volume --> Select insatce and click  on Attach volume.
+
+Detach EBS volume to instance : -
+1. unmount first.
+2. EC2 --> Elastic Block Store --> Volumes --> Select volume --> Action --> Detach volume --> detach	
+
+Q. How we can use elastic volume in linux instance? (Means EBS)
+Ans : 
+1. Create volume.
+2. Attache volume to instance.
+3. Apply file system on volume we need to run below command.
+	mkfs --> mkfs.ext4 (volume name) --> mount volume to any directory.
+
+Q. How to attach and detach EBS to windows insatce?
+Ans :
+Attache EBS volume to windows instance : -
+1. Create volume and then mount it.
+2. Server manager -->Files and storage services --> Disks --> Right click and click on bring if it is offline --> Right click and click on new volume  ( That's how we can attach)
+
+Detach EBS volume to windows instance : -
+We need to take volume offline from server manager and then detach from elastic block storage.
+
+Q. How to resize the EBS volume for linux?
+Ans :
+We need to modify the volume from AWS console.
+(Note : - You can just increase the size)
+EC2 --> Elastic Block Store --> Volumes --> Select volume and click on action --> Modify
+We need to resize the file system as well with the help of resize2fs commmand.
+
+Q. How to resize the EBS root volume for linux?
+Ans :
+We need to modify the volume from AWS console.
+(Note : - You can just increase the size)
+EC2 --> Elastic Block Store --> Volumes --> Select volume and click on action --> Modify
+1. We need to grow the partition 
+growpart     /dev/xvdv    1
+2. resize the file system
+
+Q. How to attach 1 EBS volume to multiple instances?
+Ans :
+While creating EBS volume we need to select "Provisioned IOPS SSD (io2)" volume and clieck on checkbox for multiattach.
+(Note : - t2 is not capable for this service.)
+
