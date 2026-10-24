@@ -301,3 +301,62 @@ Ans :
 While creating EBS volume we need to select "Provisioned IOPS SSD (io2)" volume and clieck on checkbox for multiattach.
 (Note : - t2 is not capable for this service.)
 
+EBS snapshot :
+Q. what is EBS snapshot?
+Ans :
+1. A backup of the data on an EBS volume at a specific moment.
+2. Stored in Amazon S3 (behind the scenes, though you don’t see it directly).
+3. Incremental after the first snapshot (only changes are saved to reduce storage cost).
+4. You can create a new EBS volume from a snapshot. 
+(Note :- EBS volume size and new EBS volume size should be same and above)
+
+Q. How  to change EBS volume type? (Ex. gp2 to gp3)
+Ans :
+Take the EBS volume snaphot and after that while creating new volume from snapshot we can change the EBS volume typer over there.
+
+Q. How to take EBS snapshot manually?
+Ans :
+EC2 --> Elastic Block Store --> Volumes --> Select volume and click on action --> create snapshot --> and then click on create snapshot.
+
+Q. How to make EBS volume from snapshot?
+Ans :
+EC2 --> Elastic Block Store --> Snapshot --> Select snapshot and click on action --> Click on create volume from snapshot --> Enter all the values and click on create volume
+
+Q.  What EC2 lifecycle policy?
+Ans :
+An EC2 lifecycle policy is a set of rules that helps manage the life of an EC2 instance, such as when to start, stop, or terminate it.
+
+Q. How to schedule snapshot for any EBS volume?
+Ans :
+1. In order to schedule snapshot first we need to give tags to EBS volume.
+2. We need to create policy for schedule snapshot.
+EC2 --> Elastic Block Store --> Lifecycle Manager --> Select policy type which EBS snapshot policy --> Next --> Select volume, Tags and ect and then click on next--> Configured schedule like date,time, retaintion, ect and click on review policy -- > Create policy.
+
+Q. How to recover delete snapshopt?
+Ans :
+In order to recover delete snapshot we need to create retention rule.
+EC2 -->  Elastic block sorage --> snapshot --> Recycle bin --> Create retention rule --> Enter values and Create retention rule.
+If you delete the snapshot then go to recycle bin.
+EC2 -->  Elastic block sorage --> snapshot --> Recycle bin --> Resources --> Selcet and recover.
+
+Q. How to copy snapshot from one region to another region?
+Ans :
+We need to copy the snapshot on the destination region.
+EC2 -->  Elastic block sorage --> snapshot --> Select snapshot and Go to action --> Copy snapshot --> Enter values and Select the destination region --> Copy snapshot.
+Now you can go to destination region and snapshot there you will get the copy snapshot.
+(Note :- Decrypt snapshot will be encrapt after copy snapshot from one region to another region)
+
+Encrypt the EBS volume 
+1. If you will create volume from snapshot and if encryption is enabled then volume will be encrypted automatic we can't change.
+2.  If you will create volume from snapshot and if encryption is disable then we can change encryption setting.
+EC2 -->  Elastic block sorage --> snapshot --> Select snapshot and Go to action --> create volume from snapshot --> There we can change the encryption setting.
+
+Q.  to enable EBS encryption?
+Ans :
+EC2 --> Setting --> Click on manage in EBS encryption --> click on enable check box --> Update EBS encryption
+
+Q. What is manage fast snapshot?
+Ans :
+It improves the performance of volumes restored from snapshots.
+EC2 --> Elastic block storage --> Snapshot --> --> Select snapshot and Go to action --> manage fast snapshot --> Now you can select avialibility zones --> Enable
+
