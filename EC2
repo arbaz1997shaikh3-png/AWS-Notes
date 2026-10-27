@@ -360,3 +360,5 @@ Ans :
 It improves the performance of volumes restored from snapshots.
 EC2 --> Elastic block storage --> Snapshot --> --> Select snapshot and Go to action --> manage fast snapshot --> Now you can select avialibility zones --> Enable
 
+=======================================================================================================================================================
+
