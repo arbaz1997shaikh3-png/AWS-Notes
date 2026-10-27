@@ -1,0 +1,20 @@
+Q. Diff between EFS and EBS
+
+**Elastic file system (EFS)**
+
+Q. What is EFS?
+Ans : 
+Amazon EFS is a scalable, managed file storage service that allows multiple Linux EC2 instances to share files over a network.
+Remember : EFS = shared storage; EBS = disk storage for an EC2 instance.
+(Note : We can use FSX for  windows machine.)
+
+Q. How to configure EFS on 2 instances?
+Ans :
+1. First need to create 2 securtiy group.
+      a. One for webserver, ssh and http port should be enable.
+      b. Second for EFS, nfs port should be enable and configure webserver SG into EFS SG.
+2. Create 2 instances on different AZs (ap-south-1a and  ap-south-1b) and configure the webserver on both instances.
+      a. We need to install httpd and amazon-efs-utils services.
+<h1>                        <h1>
+
+3. Create EFS and configure EFS SG into EFS. 
