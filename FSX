@@ -1,0 +1,51 @@
+Q. What is FSX?
+Ans : 
+1. FSx stands for Amazon File System.
+2. Amazon FSx is a fully managed AWS service that provides scalable file storage for Windows, Linux, and high-performance computing workloads.
+
+Types of Amazon FSx :
+AWS provides four main types:
+Type	                  |                    Used for
+-------------------------------------------------------------------------------------------
+FSx for Windows         |      File Server	Windows-based shared file storage.
+FSx for Lustre	        |      High-speed storage for computing and data processing.
+FSx for NetApp ONTAP	  |      Enterprise file storage with advanced features.
+FSx for OpenZFS	        |      High-performance storage for Linux and Unix workloads.
+
+
+Q. Difference between EFS vs FSx vs EBS?
+Ans :
+Feature	           |                 EBS	                      |                EFS	     |             FSx
+------------------------------------------------------------------------------------------------------------------------------------------------
+Storage type	     |       Block storage	                      |      File storage	       |       File storage
+Main use	         |       EC2 disk	                            |    Shared Linux files	   |     Windows and specialized file storage
+Sharing	           |       Usually one EC2 instance at a time	  |    Multiple instances	   |     Multiple clients, depending on file system
+
+
+Q. Benifits of FSX?
+Ans : 
+1. Fully Managed: AWS manages the storage infrastructure for you.
+2. Easy to Use: You can create and use file storage easily.
+3. Scalable: You can increase storage capacity as your needs grow.
+4. High Performance: Provides fast access to files for demanding applications.
+5. Security: Supports access controls and encryption to protect data.
+6. Backup and Recovery: Supports backups to help recover your data.
+7. Shared Storage: Multiple users or servers can access shared files.
+8. Cost Management: You pay for the storage and resources you use.
+
+==========================================================================================================================================================
+**NetApp ONTAP**
+
+Q. What is NetApp OnTap?
+Ans : 
+Amazon FSx for NetApp ONTAP is a fully managed AWS storage service that provides scalable, secure, and shared file storage with advanced data management features.
+
+Benefits of NetApp ONTAP : -
+
+1. Shared Storage: Multiple servers can access the same data.
+2. Data Protection: Helps protect data using snapshots.
+3. Backup and Recovery: Supports data backup and recovery.
+4. Security: Provides access control and encryption.
+5. Scalability: Storage can grow as requirements increase.
+6. High Availability: Supports reliable storage configurations.
+
