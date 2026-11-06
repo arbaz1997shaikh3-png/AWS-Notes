@@ -158,7 +158,7 @@ Interruption	 |	         No          |      			No			|      Yes (anytime)
 =======================================================================================================================================================
 **AMI (Amazon Machine Image)**
 
-Q. Wha is AMI?
+Q. What is AMI?
 Ans :
 An AMI (Amazon Machine Image) is a preconfigured template used to launch virtual machines (EC2 instances) in AWS.
 
@@ -361,4 +361,6 @@ It improves the performance of volumes restored from snapshots.
 EC2 --> Elastic block storage --> Snapshot --> --> Select snapshot and Go to action --> manage fast snapshot --> Now you can select avialibility zones --> Enable
 
 =======================================================================================================================================================
+
+
 
