@@ -1,1 +1,37 @@
+Q. What is VPC?
+Ans :
+1. VPC stands for virtual private cloud.
+2. VPC is your own private network inside AWS where you can run resources like EC2, RDS, Lambda, etc., with full control over networking, security, and traffic flow.
 
+Q. What is CIDR?
+Ans :
+1. CIDR stands for Classless Inter-Domain Routing.
+2. CIDR is a way to represent IP address ranges.
+
+Q. How to create VPC?
+Ans :
+VPC --> Your VPCs --> Create VPC.
+
+Q. What is subnet?
+Ans :
+Subnet is a smaller network inside a larger network.
+OR
+A subnet is a range of IP addresses within a VPC. It is used to divide a VPC into smaller networks and launch AWS resources in different network sections.
+VPC --> Subnets --> Create subnet.
+
+Q. What is internet getway?
+Ans :
+Internet getway allows your VPC to connect with the Internet.
+VPC --> Internet getway --> Create internet getway.
+
+Q. What is route tables?
+Ans : 
+A Route Table in AWS is a set of rules (routes) that tells your VPC where network traffic should go.
+
+Q. How to make linux instance and give internet?
+Ans :
+1. Create VPC.
+2. Create subnet.
+3. Create internet getway and check subnet are added or not.
+4. Allow all traffic for route table under VPC.
+5. Now  we ca able to access the internet.
