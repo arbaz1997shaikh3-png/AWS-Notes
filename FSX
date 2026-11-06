@@ -49,3 +49,55 @@ Benefits of NetApp ONTAP : -
 5. Scalability: Storage can grow as requirements increase.
 6. High Availability: Supports reliable storage configurations.
 
+Q. How to configure NetApp OnTap using 2 linux machine?
+Ans : 
+1. We need to create 2 securty group. One for linux servers and another for NetApp OnTap.
+        a. Create SG for linux server. Need to allow ssh port.
+        b. Create SG for NetApp OnTap. Need to allow NFS ports. (111 and another is already showing in SG)
+                  (Note :- In the Ontap SG we need to add SG which we have created for server. 
+2. Create 2 linux servers and add first SG and we should install the NFS package.
+        dnf install -y nfs-utils
+3. Now Create the NetApp OnTap FSX and add NetApp OnTap SG.
+4. Go to FSX volume and clickon volume, Click on attach and run below command.
+          1. Create a new directory on your EC2 instance (for example, /fsx)
+              mkdir /fsx
+          2. Mount your volume
+              mount -t nfs svm-06e5c7559b28fe8da.fs-05412f78a5b5b81a7.fsx.ap-south-1.amazonaws.com:/vol1 /fsx 
+5. If we make any changes on anyone server then it will automatic reflect to another FSX directory.
+
+Q. How to delete the NetApp OnTap file system configuration?
+Ans : 
+First need to delete the volume and virtual machine and after that we can able to delete the NetApp OnTap file system.
+
+==========================================================================================================================================================
+**Openzfs**
+
+Q. What is Openzfs?
+Ans :
+OpenZFS is an advanced open-source file system that provides data integrity, snapshots, compression, storage pooling, and RAID-Z for reliable storage management.
+
+Main features of OpenZFS
+1. Data Integrity: Detects data corruption using checksums.
+2. Snapshots: Takes a point-in-time copy of data.
+3. Compression: Reduces the amount of storage required.
+4. Storage Pools: Combines multiple disks into one storage pool.
+5. Replication: Transfers snapshots and data to another system.
+6. RAID Support: Supports RAID-like configurations through RAID-Z.
+
+Benefits:
+- Fully managed storage.
+- High-performance file access.
+- Data compression.
+- Snapshots and backups.
+- Supports NFS access from Linux clients.
+
+Q. Differece between OpenZFS and  NetApp OnTap?
+Ans :
+OpenZFS                                                                                          NetApp OnTap
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. Open-source file system                                                        1. Enterprise storage operating system
+2. Supports snapshots                                                             2. Supports snapshots
+3. High-performance file storage.                                                 3. Low performance as compare to openZFS. 
+4. suitable for Linux and NFS workloads.                                          4. suitable for Linux, Windows, and enterprise applications.
+5. OpenZFS supports NFS.                                                          5. NetApp Ontap support NFS, SMB and iSCSI
+
