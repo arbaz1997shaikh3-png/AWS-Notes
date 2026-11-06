@@ -101,3 +101,37 @@ OpenZFS                                                                         
 4. suitable for Linux and NFS workloads.                                          4. suitable for Linux, Windows, and enterprise applications.
 5. OpenZFS supports NFS.                                                          5. NetApp Ontap support NFS, SMB and iSCSI
 
+==========================================================================================================================================================
+**Windows file server**
+
+Q. What is amzon fsx for windows file system?
+Ans :
+1. It allows multiple Windows computers or servers to access the same shared files over a network
+2. It is built on Microsoft Windows Server and supports the SMB (Server Message Block) protocol.
+3. It is a network protocol used to share files, folders and printers between computers.
+
+Main benefits
+1. Fully Managed Service: AWS manages the file server, hardware and maintenance.
+2. Shared File Storage: Multiple Windows servers can access the same files and folders.
+3. Active Directory Integration: Users can log in using their existing Windows domain accounts.
+4. Security: Supports NTFS permissions to control who can access files.
+5. Automatic Backups: Helps protect your important data.
+6. High Availability: Supports highly available file storage configurations.
+7. Data Encryption: Protects data at rest and in transit.
+8. SMB Support: Allows Windows systems to share files over a network.
+9. Scalability: Storage capacity and performance can be adjusted.
+10. Monitoring: Integrates with Amazon CloudWatch for monitoring.
+
+
+Q. What is active directory?
+Ans : 
+Active Directory is a Microsoft directory service that centrally manages users, computers, groups, authentication and access permissions in a Windows network.
+
+==========================================================================================================================================================
+**Luster**
+
+Q. What is amazon fsx for luster?
+Ans :
+1. Amazon FSx for Lustre is a fully managed, high-performance file storage service provided by AWS. 
+2. It is mainly used for high-performance computing, machine learning, video processing and other workloads that require fast access to large datasets.
+
