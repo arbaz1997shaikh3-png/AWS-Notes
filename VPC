@@ -28,10 +28,18 @@ Q. What is route tables?
 Ans : 
 A Route Table in AWS is a set of rules (routes) that tells your VPC where network traffic should go.
 
-Q. How to make linux instance and give internet?
+Q. How to provide internet to EC2 instace with the help of VPC?
+Ans:
+1. Create VPC and subnet.
+2. Create internet getway.
+3. Provide rule (route) from route table (0.0.0.0/0 with internet getwayy).
+4. While creating EC2 insatce select VPC and subnet in network setting.
+5. Enable Auto-assign public IP in network setting.
+
+Q. How to connect private subnet EC2 instace.
 Ans :
-1. Create VPC.
-2. Create subnet.
-3. Create internet getway and check subnet are added or not.
-4. Allow all traffic for route table under VPC.
-5. Now  we ca able to access the internet.
+1. You need to access the jump server (public server).
+2. Ping to private server to check the private subnet server is in network or not.
+3. Enter the key in the file and give it only write permision for user (chmod 400 file name).
+4. Run the below command.
+	ssh -i 	KeyName	ubuntu@privateIP.
