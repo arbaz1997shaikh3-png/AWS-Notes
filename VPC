@@ -2,6 +2,11 @@ Q. What is VPC?
 Ans :
 1. VPC stands for virtual private cloud.
 2. VPC is your own private network inside AWS where you can run resources like EC2, RDS, Lambda, etc., with full control over networking, security, and traffic flow.
+3. We can create 5 VPCs in one region.
+
+Q. Can we establish connection between 2 VPCs under same region?
+Ans :
+Yes, This is called VPC Peering.
 
 Q. What is CIDR?
 Ans :
@@ -66,3 +71,10 @@ Ans :
 			ssh -i New.key.pem ec2-user@192.168.0.96 (Private instance IP)
 8. Now  grant internet to the private instance. Kindly follow below steps.
 		a. Create NAT getway and attach to the main route table where private-subnet is configured.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+**VPC peering**
+
+Q. What is VPC peering?
+Ans : 
+VPC Peering is a networking connection between two VPCs that allows resources in both VPCs to communicate privately using private IP addresses.
