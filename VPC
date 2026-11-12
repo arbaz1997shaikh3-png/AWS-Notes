@@ -28,6 +28,10 @@ Q. What is route tables?
 Ans : 
 A Route Table in AWS is a set of rules (routes) that tells your VPC where network traffic should go.
 
+Q. What is NAT gatways?
+Ans : 
+NAT Gateway (Network Address Translation Gateway) is an AWS service that allows instances in a private subnet to access the internet, without allowing the internet to directly access those instances.
+
 Q. How to provide internet to EC2 instace with the help of VPC?
 Ans:
 1. Create VPC and subnet.
