@@ -43,3 +43,22 @@ Ans :
 3. Enter the key in the file and give it only write permision for user (chmod 400 file name).
 4. Run the below command.
 	ssh -i 	KeyName	ubuntu@privateIP.
+
+Q. Create 2 instances one is public and another is private and access the private instace via public via NAT getway?
+Ans :
+1. Create VPC.
+2. Create 2 subnet (Public-Subnet and Private-Subnet) and add both the subnet under VPC.
+3. Create the internet getway and attach to the VPC.
+4. Create route table and attache public subnet to it.
+5. Add internet getway under route table to allow internet traffic. (0.0.0.0)
+6. Now create instance under public subnet where we have internet connectivity and access the instance.
+		C:\Users\USER\Downloads>ssh -i New.key.pem ec2-user@3.111.196.76 (Public IP)
+7. Create private instance and find the below steps to access the private instance.
+		a. Copy the perm key to the bashton host Instance (Jump Instance).
+			C:\Users\USER\Downloads>scp -i New.key.pem "New.key.pem" ec2-user@3.111.196.76:/home/ec2-user
+		b. Now access the bashton host instance (Public instace) and give 400 permision to the perm key.
+			chmod 400 New.key.pem
+		c. Access the private instance.
+			ssh -i New.key.pem ec2-user@192.168.0.96 (Private instance IP)
+8. Now  grant internet to the private instance. Kindly follow below steps.
+		a. Create NAT getway and attach to the main route table where private-subnet is configured.
