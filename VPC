@@ -72,9 +72,41 @@ Ans :
 8. Now  grant internet to the private instance. Kindly follow below steps.
 		a. Create NAT getway and attach to the main route table where private-subnet is configured.
 
+Q. Connect provate insatce using VPC endpoint.
+Ans : 
+1. Go to VPC enpoint and create it.
+2. Go to provate instance and click on connect, Select "Connect using instance connect endpoint".
+(Note : - Need to use endpoint we need account username and password.)
+
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
 **VPC peering**
 
 Q. What is VPC peering?
 Ans : 
 VPC Peering is a networking connection between two VPCs that allows resources in both VPCs to communicate privately using private IP addresses.
+
+Q. How to configure VPC peering? (You have 2 VPC in other region or diff account)
+Ans : 
+1. We need to launch 2 instances with 2 other VPC's and CIDR should be different.
+2. Create the peering connection.
+	VPC --> Peering connection --> Create connection peering.
+3. Configure the connection peering on both the route tables rule.
+	a. Go to rout table rules and edit route and enetr CIDR.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Network Access Control List** (NACL)
+
+Q. What is NACl and how to configure?
+Ans :
+NACL is a security feature in AWS that controls incoming and outgoing network traffic at the subnet level.
+
+	Configuration : -
+		VPC --> Network ACLs --> Edie inbound rule --> Add new rule.
+		VPC --> Network ACLs --> Edie outbound rule --> Add new rule.
+
+Q. What is diffeence between NACL and security group?
+Ans : 
+1. NACL is use for subnet level and SG use for instance level.
+2. NACL can deny the IP address and SG only allow the traffic.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
