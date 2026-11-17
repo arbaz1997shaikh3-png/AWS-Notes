@@ -75,7 +75,10 @@ Q. Client has asked to do cost saving on current infrastucture so what would you
 Ans : 
 
 #####################################################################################
-
+Q. Howto connect on premise server to AWS account?
+Ans : 
+1. VPN
+2. Direct Connect
 
 #####################################################################################
 
