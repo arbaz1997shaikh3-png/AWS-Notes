@@ -1,1 +1,104 @@
+Q. Tell me about yourself and roles and responsibility and your current project?
+Ans : 
 
+#####################################################################################
+Q. Unable to access server via ssh/RDP, what are the reasons?
+Ans :
+1. Instance current status - running or not
+2. Will check the ec2 Health status is 2/2 or not, if it is 0/2 then there is some issue with aws hardware or if it is 1/2 then check OS
+   system logs/instance screen shot.
+3. When its 0/2 so we can stop and start the server so that this ec2 instace move from one physical host to another and will have
+   the chance it can be 2/2.
+4. Need to check ec2 SG that SSH or RDP port is allowed or not.
+5. Need to check NACL if SSH or RDP port denied.
+6. Check if instace in public or private subnet.
+7. Check VPC has the IGW or not.
+8. Check route table has proper IGW entry.
+9.  In Cloudtrail we can event history- any recent changes happen to the ec2. 
+
+#####################################################################################
+Q. What is diffeence between NACL and security group?
+Ans :
+1. NACL is use for subnet level and SG use for instance level.
+2. NACL can deny the IP address and SG only allow the traffic.
+
+#####################################################################################
+Q. AWS Application LB not working?
+   Clients cannot connect to an internet facing LB?
+   Troubleshoot your application LB?
+Ans : 
+1. Confirm the ALB is in the Active state. 
+2. Check ALB Security Group. Check Target Group Health.
+3. Verify the ALB subnets  have an Internet Gateway route.
+4. Check EC2 instance SG and NACL.
+5. We can check the backend application logs.
+
+#####################################################################################
+Q. VPC Peering issues?
+Ans :
+1. Check security Group in source and destination instances whether required ports are opened or not.
+2. check the vpc perring status in active state or not in aws console.
+3. check source and Destination VPC route table whether routing for peering is configured with proper CIDR or not.
+4. sometimes may be issue with firewall of EC2 instance.
+
+#####################################################################################
+Q. S3 bucket showing error access denied?
+Ans : 
+If your AWS S3 bucket is showing Access Denied, it usually means your IAM user or role does not have permission to access the bucket or its objects.
+
+#####################################################################################
+Q. Please tell your aws archtecture end to end ?
+Ans : 
+We use a multi-account architecture managed by AWS Organizations. Each environment has its own VPC across multiple AZs. Public subnets host ALB, Bastion, and NAT Gateway, 
+while private subnets host application servers in Auto Scaling Groups and RDS databases. Route 53 handles DNS, traffic flows through ALB, and scaling is based on CPU or request count. 
+Security is enforced using IAM roles, Security Groups, SCPs, and monitoring is done using CloudWatch and CloudTrail.
+
+#####################################################################################
+Q.  What is RTO ?
+Ans : 
+1. RTO stands for Recovery Time Objective.
+2. RTO is the maximum acceptable time required to restore a system or application after a disruption.
+
+#####################################################################################
+Q. Please explain your DR setup and what is the trigger point ?
+
+#####################################################################################
+Q. What is the central log management tool your using and why your strict to it ?
+
+#####################################################################################
+Q. I have 10 production and 10 dev aws account and i have lambda which trigger on every month and get the report and suddenly its stopped
+   working and lambda giving error as timeout.
+Ans : 
+
+#####################################################################################
+Q. Client has asked to do cost saving on current infrastucture so what would you do?
+Ans : 
+
+#####################################################################################
+
+
+#####################################################################################
+
+
+#####################################################################################
+
+
+#####################################################################################
+
+
+#####################################################################################
+
+
+#####################################################################################
+
+
+#####################################################################################
+
+
+#####################################################################################
+
+
+#####################################################################################
+
+
+#####################################################################################
