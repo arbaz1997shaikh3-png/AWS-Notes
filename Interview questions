@@ -1,5 +1,27 @@
 Q. Tell me about yourself and roles and responsibility and your current project?
 Ans : 
+Hi , my name is Arbaz Shaikh and im from pune , i have completed my masters from pune university,
+i have started my career from EXL org where i was handling backoffice tasks and then i moved to second orgnization i.e UPS,
+where i was part of L1 and L2 linux support team and the project was logistic, then i moved connectwise which is my current company,
+Here im working with US client and im part of AWS team,
+
+coming to my roles&Responsibilty im responsible for managing , maintaning and administatoring AWS services such as 
+EC2 , VPC , S3 , RDS , ROUTE53 , CLOUDTRAIL , CLOUDWATCH, IAM , LAMBDA , SYSTEM MANAGER , LOADBALANCING AND AUTOSCALLING.
+
+here we are doing all operational and monitoring activitie and managing the cloud infrastuctre for the client.
+ 
+my day to day tasks like managing AWS cloud infrastucre , provisioning and decomisioning the EC2,
+instances as per client requirement , managing storage like provisioning and taking snapshot of EBS volumes, taking AMI backup of critical 
+application before activity, Creation of IAM users and managing permission and Monitored and worked on alerts send by cloudwatch on various 
+issues related to server availability, disk issues, CPU, memory, processes.
+Doing cost optimization in prject for reducing the bills.
+Troubleshooting issues related to cloud services and linux servers.
+Doing patching of servers using system manager.
+Setup and managed security groups, VPC’ specific to environment.
+Configuring and managing LB and autoscalling.
+These are my day to day tasks.
+
+
 
 #####################################################################################
 Q. Unable to access server via ssh/RDP, what are the reasons?
