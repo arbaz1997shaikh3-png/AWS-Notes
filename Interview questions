@@ -37,6 +37,9 @@ Ans :
 7. Check VPC has the IGW or not.
 8. Check route table has proper IGW entry.
 9.  In Cloudtrail we can event history- any recent changes happen to the ec2. 
+10. we need to check instance screenshot from EC2 console.
+Action -- Monitoring and troubleshoot -- Instance ScreenShot.
+If any BSOD issue show under instance screenshot then kindly restore the instance from latest backup (snapshot)
 
 #####################################################################################
 Q. What is diffeence between NACL and security group?
