@@ -100,13 +100,22 @@ Q. Client has asked to do cost saving on current infrastucture so what would you
 Ans : 
 
 #####################################################################################
-Q. Howto connect on premise server to AWS account?
+Q. How to connect on premise server to AWS account?
 Ans : 
 1. VPN
 2. Direct Connect
 
 #####################################################################################
-
+Q. How will you troubleshoot the peering issue?
+Q. Did you face any peering issue?
+Q. AWS peering are not working?
+Ex :-
+There are 2 VPCs which are connected with each other with the help of connection peering. We can not able to access the one instance from another instance.
+Ans : 
+1. Need to check the SG port allow or not. 
+2. Need to check peering status. (Active or not)
+3. First check both the instances are  connecting individually. (Login to both the machines)
+4. Check the total nomber of subnet 
 
 #####################################################################################
 
