@@ -110,3 +110,24 @@ Ans :
 2. NACL can deny the IP address and SG only allow the traffic.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Transit gatway**
+
+Q. What is transit gatway?
+Ans :
+AWS Transit Gateway (TGW) is a networking service that connects multiple VPCs and on-premises networks through one central gateway.
+
+Q. Real-time company example
+   Suppose you have 20 AWS accounts:
+   - 10 Production accounts.
+   - 10 Development accounts.
+   Each account has its own VPC.
+Ans :
+You can use AWS Transit Gateway to connect these VPCs centrally, instead of creating and maintaining many individual peering connections.
+
+Q. How configure transit gatway?
+Ans :
+1. Create 1 transit gatway.
+2. Create transit gatway attachment for each and every VPCs.
+3. Make the entry under route table.
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
