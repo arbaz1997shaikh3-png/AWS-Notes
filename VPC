@@ -125,9 +125,31 @@ Ans :
 You can use AWS Transit Gateway to connect these VPCs centrally, instead of creating and maintaining many individual peering connections.
 
 Q. How configure transit gatway?
+Suppose you have 3 VPC, 3 subnet for each VPC, 3 instances under each subnet. 
 Ans :
 1. Create 1 transit gatway.
 2. Create transit gatway attachment for each and every VPCs.
-3. Make the entry under route table.
+3. Make the entry under VPC, route table.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------
+**Endpoint**
+
+Q. What is VPC endpoints?
+Ans : 
+A VPC Endpoint is a networking feature that enables private connectivity between resources inside a VPC and supported AWS services without requiring an Internet Gateway or NAT Gateway.
+There are 2 types of VPC endpoint.
+1. Interface Endpoint
+2. Gateway Endpoint ---> Only for Amazon S3 and DynamoDB
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Q. What is VPC flow logs?
+Ans :
+VPC Flow Logs is an AWS feature that captures information about IP traffic going to and from network interfaces in your VPC.
+
+In simple words, VPC Flow Logs help us monitor and troubleshoot network traffic in AWS.
+
+For example:
+- Which IP address is communicating with your EC2 instance?
+- Which port is being used?
+- Is the traffic allowed or rejected?
+- Which protocol is being used?
